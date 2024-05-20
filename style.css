@@ -45,16 +45,89 @@ section.menu{
 
 }
 
+/* .menu__header {
+    display: flex;    
+    margin-left: 2em;    
+
+} */
+
+.menu {
+    display: flex;
+    padding: 1em;
+}
+
+.menu__header{
+    display: inline;
+    margin-right: 32%;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.navbar {
+    
+    justify-content: flex-end;
+}
+
+.menu__list {
+    display: inline-flex;
+    justify-content: flex-end;
+    
+}
+
+.menu__list__item {
+    margin-left: 1em;
+}
+
 /*Sección Title*/
 
 section.title{
 
 }
 
+.title__container {
+    margin-top: 4em;
+    margin-right: 2em;
+}
+
+.title__profile {
+    width: 20em;    
+    border-radius: 30%;
+}
+
+.title__bio {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.title__div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.title__network {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2em;
+}
+
+.title__network__item a {
+    color: rgb(66, 114, 225);
+}
+
+
+
 /*Sección About*/
 
 section.about{
 
+}
+
+.about {
+    display: flex;
+    justify-content: center;
 }
 
 /*Sección Hobbies*/
@@ -87,6 +160,129 @@ section.footer{
    
 }
 
+.skills__line {
+    display: flex;
+    justify-content: space-around;
+    padding: 3em 2em 3em 2em ;
+    text-align: center;
+
+}
+
+.skills__title {
+    text-align: center;
+    margin-top: 5em;
+}
+
+.hobbies__line {
+    display: flex;
+    justify-content: space-around;
+    padding: 3em 2em 3em 2em ;
+    text-align: center;
+}
+
+.hobbies__title {
+    text-align: center;
+    margin-top: 5em;
+}
+
+.academic__title {
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 3em;
+}
+
+/* .academic__courses__box {
+    display: flex;
+} */
+
+.academic__courses__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.img-formation {
+    border-radius: 10px;
+}
+
+
+.experience {
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+
+.experience__section__title {
+    margin-bottom: 2em;
+}
+
+.experience__botao--demo {
+    border: none;
+    background-color: rgb(66, 114, 225);
+    padding: 1em;
+    border-radius: 20px;
+    color: #F5F5F5;
+    margin-top: 2em;
+}
+
+.experiencia__botao--repo {
+    border: none;
+    background-color: rgb(163, 166, 174);
+    padding: 1em;
+    border-radius: 20px;
+    color: #F5F5F5;
+    margin-top: 2em;
+}
+
+.experience__img {
+    border-radius: 8px;
+}
+
+.experience__box {
+    margin-bottom: 5em;
+}
+
+.formcontato__img {
+    border-radius: 10px;
+}
+
+.formcontato__form {
+    display: inline-block;
+}
+
+input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    border: none; 
+    border-radius: 20px;
+    padding: 1em;
+    margin: auto;    
+
+}
+
+.formcontato__input {
+    margin-bottom: 1em;
+}
+
+.formcontato__textarea {
+    display: flex;
+    border: none;
+    margin-top: 2em;
+    padding: 2em;
+    border-radius: 20px;
+    
+}
+
+.formcontato__botao {
+    border: none;
+    background-color: rgb(66, 114, 225);
+    padding: 1em;
+    border-radius: 20px;
+    color: #F5F5F5;
+    margin-top: 2em;
+}
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
 
