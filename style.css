@@ -1,328 +1,343 @@
-/*CSS Reset / Normalize*/
-/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
-en las secciones señaladas */
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
-
-:root{
-    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
-}
-
+/* General Styles */
 body {
-    box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1;
-}
-ol, ul,li {
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    color: var(--cor-de-link);
+    box-sizing: border-box;
 }
 
-/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
-
-Lo que es el BEM?
-
-BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
-desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
-independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
-con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
-
-Enlace de la documentación oficial!
-https://en.bem.info/methodology/quick-start/*/
-
-/*Sección Menu*/
-
-section.menu{
-
-}
-
-/* .menu__header {
-    display: flex;    
-    margin-left: 2em;    
-
-} */
-
-.menu {
-    display: flex;
-    padding: 1em;
-}
-
-.menu__header{
-    display: inline;
-    margin-right: 32%;
-    font-size: large;
-    font-weight: bolder;
-}
-
+/* Navbar Styles */
 .navbar {
-    
-    justify-content: flex-end;
-}
-
-.menu__list {
-    display: inline-flex;
-    justify-content: flex-end;
-    
-}
-
-.menu__list__item {
-    margin-left: 1em;
-}
-
-/*Sección Title*/
-
-section.title{
-
-}
-
-.title__container {
-    margin-top: 4em;
-    margin-right: 2em;
-}
-
-.title__profile {
-    width: 20em;    
-    border-radius: 30%;
-}
-
-.title__bio {
-    font-size: xx-large;
-    font-weight: bold;
-}
-
-.title__div {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 1rem;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar .nav-links a:hover {
+    color: #ddd;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
 }
 
 .title__network {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 2em;
-}
-
-.title__network__item a {
-    color: rgb(66, 114, 225);
-}
-
-
-
-/*Sección About*/
-
-section.about{
-
-}
-
-.about {
+    list-style: none;
     display: flex;
     justify-content: center;
+    gap: 1rem;
 }
 
-/*Sección Hobbies*/
-
-section.hobbies{
-    
+.title__network a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
-/* Experiencia Académica*/
-
-section.academic{
-
+.title__network a:hover {
+    color: #555;
 }
 
-/* experiencia*/
-
-section.experience{
-
+/* About Section Styles */
+.about {
+    padding: 2rem;
+    text-align: center;
 }
 
-/*Contacto*/
-
-section.formcontato{
-
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-/*footeer*/
+.about p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
 
-section.footer{
-   
+/* Skills Section Styles */
+.skills {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .skills__line {
     display: flex;
-    justify-content: space-around;
-    padding: 3em 2em 3em 2em ;
-    text-align: center;
-
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allow skills to wrap on smaller screens */
 }
 
-.skills__title {
+.skills__box {
     text-align: center;
-    margin-top: 5em;
+}
+
+.skills__box img {
+    max-width: 100px;
+}
+
+.skills__box p {
+    font-size: 1rem;
+}
+
+/* Hobbies Section Styles */
+.hobbies {
+    padding: 2rem;
+    text-align: center;
+}
+
+.hobbies h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .hobbies__line {
     display: flex;
-    justify-content: space-around;
-    padding: 3em 2em 3em 2em ;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allow hobbies to wrap on smaller screens */
+}
+
+.hobbies__box {
     text-align: center;
 }
 
-.hobbies__title {
-    text-align: center;
-    margin-top: 5em;
+.hobbies__box img {
+    max-width: 100px;
 }
 
-.academic__title {
-    text-align: center;
-    margin-top: 5em;
-    margin-bottom: 3em;
+.hobbies__box p {
+    font-size: 1rem;
 }
 
-/* .academic__courses__box {
+/* Academic Section Styles */
+.academic {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+.academic h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.academic__courses {
     display: flex;
-} */
-
-.academic__courses__list {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allow courses to wrap on smaller screens */
 }
 
-.img-formation {
-    border-radius: 10px;
+.academic__courses__box {
+    text-align: center;
 }
 
+.academic__courses__box img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
 
+.academic__courses__box h3 {
+    font-size: 1.2rem;
+}
+
+.academic__courses__box p {
+    font-size: 1rem;
+}
+
+/* Experience Section Styles */
 .experience {
+    padding: 2rem;
     text-align: center;
-    margin-top: 4em;
-    margin-bottom: 2em;
 }
 
-.experience__section__title {
-    margin-bottom: 2em;
-}
-
-.experience__botao--demo {
-    border: none;
-    background-color: rgb(66, 114, 225);
-    padding: 1em;
-    border-radius: 20px;
-    color: #F5F5F5;
-    margin-top: 2em;
-}
-
-.experiencia__botao--repo {
-    border: none;
-    background-color: rgb(163, 166, 174);
-    padding: 1em;
-    border-radius: 20px;
-    color: #F5F5F5;
-    margin-top: 2em;
-}
-
-.experience__img {
-    border-radius: 8px;
+.experience h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .experience__box {
-    margin-bottom: 5em;
-}
-
-.formcontato__img {
-    border-radius: 10px;
-}
-
-.formcontato__form {
-    display: inline-block;
-}
-
-input {
     display: flex;
     flex-direction: column;
-    margin-top: 2em;
-    border: none; 
-    border-radius: 20px;
-    padding: 1em;
-    margin: auto;    
-
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
-.formcontato__input {
-    margin-bottom: 1em;
+.experience__box img {
+    max-width: 300px;
+    margin-bottom: 1rem;
 }
 
-.formcontato__textarea {
+.experience__info {
+    text-align: center;
+}
+
+.experience__info h3 {
+    font-size: 1.5rem;
+}
+
+.experience__info p {
+    font-size: 1rem;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* Contact Section Styles */
+.contact {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact form input, .contact form textarea {
+    width: 80%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
     border: none;
-    margin-top: 2em;
-    padding: 2em;
-    border-radius: 20px;
-    
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.formcontato__botao {
-    border: none;
-    background-color: rgb(66, 114, 225);
-    padding: 1em;
-    border-radius: 20px;
-    color: #F5F5F5;
-    margin-top: 2em;
-}
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
-
-/*Tablet*/
-@media (min-width: 768px) {
-
-/* Menú */
-
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
+.contact form button:hover {
+    background-color: #555;
 }
 
-/*Mobile*/
-@media (min-width: 425px) {
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
 
-/*Menu*/
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-/*Titulo*/
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
 
-/*Sección sobre mi*/
+    .navbar .nav-links li {
+        margin: 0;
+        width: 100%;
+    }
 
-/*Skills*/
+    .navbar .nav-links a {
+        display: block;
+        padding: 0.5rem;
+        width: 100%;
+    }
 
-/*Hobbies*/
- 
-/*Formación Académica*/
+    .hero h1 {
+        font-size: 2rem;
+    }
 
-/*Experiencia Profesional*/
+    .hero p {
+        font-size: 1rem;
+    }
 
- /*Contacto*/
+    .about h2 {
+        font-size: 1.5rem;
+    }
 
-/*Footer*/
+    .about p {
+        font-size: 0.9rem;
+    }
 
+    .skills h2, .hobbies h2, .academic h2, .experience h2, .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills__box p, .hobbies__box p, .academic__courses__box p, .experience__info p {
+        font-size: 0.9rem;
+    }
+
+    .experience__info h3 {
+        font-size: 1.2rem;
+    }
 }
